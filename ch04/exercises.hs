@@ -20,3 +20,4 @@ splitWith_m f x = splitWith' f x [] []
         splitWith' f (x:xs) ls rt | (f x) == True = splitWith' f xs (x:ls) rt
                                   | (f x) == False && null ls = splitWith' f xs [] rt 
                                   | otherwise = splitWith' f xs [] ((reverse ls):rt)
+
